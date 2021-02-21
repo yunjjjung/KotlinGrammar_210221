@@ -2,6 +2,7 @@ package com.thejoeun.kotlingrammar_20210221
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -27,5 +28,20 @@ class MainActivity : AppCompatActivity() {
         val num4 = 3.14 // num4는 Double로 알아서 설정
         val teacherName = "조경진" // String으로 설정
         val isMale = true   //Boolean 자동 할당
+
+//        변수에 담긴 강사 이름 로그로 출력
+        Log.d("강사이름",teacherName)
     }
+
+
+
+
+
+
+
+
+
+
+
+
 }
