@@ -21,6 +21,11 @@ class MainActivity : AppCompatActivity() {
         num2 = 10
 //        num2 = 20   // num2는 value(상수)이므로 한번 대입하고 나면 변경 불가
 
+//      Int Double String Boolean 자료형 자동 대입 예제
 
+        val num3 = 30 // num3는 Int로 설정
+        val num4 = 3.14 // num4는 Double로 알아서 설정
+        val teacherName = "조경진" // String으로 설정
+        val isMale = true   //Boolean 자동 할당
     }
 }
