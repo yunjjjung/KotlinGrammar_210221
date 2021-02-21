@@ -3,6 +3,8 @@ package com.thejoeun.kotlingrammar_20210221
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.widget.Toast
+import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -31,7 +33,33 @@ class MainActivity : AppCompatActivity() {
 
 //        변수에 담긴 강사 이름 로그로 출력
         Log.d("강사이름",teacherName)
+
+        //    확인 버튼이 눌리면 할일
+        okBtn.setOnClickListener {
+
+
+//        messageEdt에 적혀있는 문구를 가져오자
+            val inputMessage = messageEdt.text.toString()
+
+//        inputMessage를 토스트로 출력
+            Toast.makeText(this, inputMessage, Toast.LENGTH_SHORT).show()
+
+//        messageTxt의 문구로 반영.
+            messageTxt.text = inputMessage
+
+//          적힌 문구가  "안녕하세요" 라면 => 로그로 "인사문구 입력됨" 출력
+//          그렇지 않다면 => 로그로 "일반문구 입력됨" 출력
+
+            if(inputMessage == "안녕하세요" || inputMessage == "반갑습니다") {
+                Log.d("메인화면", "인사문구 입력됨")
+            }
+            else {
+                Log.d("메인화면", "일반문구 입력됨")
+            }
+
+        }
     }
+
 
 
 
